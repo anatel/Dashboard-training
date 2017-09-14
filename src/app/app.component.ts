@@ -1,10 +1,18 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
+import {Summary} from "./interfaces";
+import {SUMMARIES} from "./data";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
+
 export class AppComponent {
-  title = 'app';
+  summaries: Summary[];
+
+  constructor() {
+    this.summaries = SUMMARIES;
+  }
 }
+
