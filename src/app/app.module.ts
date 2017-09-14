@@ -18,6 +18,7 @@ import {SplitButtonModule, OverlayPanelModule, TreeModule} from 'primeng/primeng
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
 import { PaginationComponent } from './pagination/pagination.component';
+import {NavigationService} from "./services/navigation.service";
 
 const appRoutes: Routes = [
   { path: '', component: AppComponent }
@@ -48,7 +49,7 @@ const appRoutes: Routes = [
     OverlayPanelModule,
     TreeModule
   ],
-  providers: [],
+  providers: [NavigationService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
