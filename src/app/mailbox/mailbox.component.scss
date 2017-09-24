@@ -47,16 +47,8 @@
     height: $inbox-header-height;
     border-bottom: 1px solid #e1e7ef;
     .left-controls {
-      .control+.control { margin-left: 20px; }
-    }
-
-    .right-controls {
-      .pagination {
-        margin-left: 25px;
-
-        .control {
-          margin-left: 10px;
-        }
+      .mail-btn + .mail-btn {
+        margin-left: 20px;
       }
     }
   }

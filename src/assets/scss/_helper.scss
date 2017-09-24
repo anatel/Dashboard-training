@@ -143,11 +143,6 @@ body { font-family: $main-font; }
   background-color: #f3f5fb;
   border: 1px solid #CECECE;
   color: #515973;
-  &.circle {
-    border-radius: 50%;
-    width: 30px;
-    padding: 0;
-  }
 }
 
 .hide {
@@ -162,11 +157,81 @@ body { font-family: $main-font; }
   color: #cccccc;
 }
 
+
+.mail-btn {
+  &.ui-button {
+    border: 1px solid #CECECE !important;
+    border-radius: 30px;
+    background-color: #f3f5fb !important;
+    color: #515973 !important;
+    padding: 0 15px;
+
+    .ui-button-text {
+      padding-left: 0;
+    }
+
+    .ui-button-icon-right {
+      margin-top: -2px;
+      padding-right: 15px;
+    }
+  }
+}
+
+.circle-btn {
+  &.ui-button {
+    @extend .circle;
+    border: 1px solid #CECECE;
+    background-color: #f3f5fb;
+
+    &:enabled:hover, &:enabled:focus {
+      border: 1px solid #CECECE;
+      background-color: #f3f5fb;
+    }
+
+    .ui-button-icon-left {
+      margin-top: -5px;
+      margin-left: -2px;
+    }
+  }
+
+}
+
 .ui-splitbutton {
   height: 30px;
-  padding-left: 15px;
-  padding-right: 15px;
+  //padding-left: 15px;
+  //padding-right: 15px;
   border: 1px solid #CECECE;
   border-radius: 30px;
   background-color: #f3f5fb;
+  display: flex;
+  align-items: center;
+
+  .ui-menu {
+    top: 30px !important;
+  }
+
+  .ui-button {
+    padding: 0 15px;
+    background: none;
+    border: none;
+    color: #515973;
+
+    &:enabled:hover, &:enabled:focus  {
+      background: none;
+      border: none;
+      color: #515973;
+    }
+
+    .fa-caret-down {
+      @extend .downarrow-small-icon;
+      margin-top: -2px;
+      &:before {
+        content: '';
+      }
+    }
+
+    .ui-button-text {
+      padding: 0;
+    }
+  }
 }

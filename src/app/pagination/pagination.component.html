@@ -1,8 +1,8 @@
 <p-splitButton class="p-control" [label]="'Show'" [model]="_itemsPerPageOptions"></p-splitButton>
 <label class="itemsCount">{{totalItems > 0? firstIndex + 1 : 0}}-{{(firstIndex + itemsPerPage) < totalItems? (firstIndex + itemsPerPage) : totalItems}} of {{totalItems}}</label>
 <div class="flex">
-  <button pButton type="button" icon="arrow-left-icon" class="ui-button-secondary p-control control" (click)="prev()" [disabled]="firstIndex==0"></button>
-  <button pButton type="button" icon="arrow-right-icon" class="ui-button-secondary p-control control" (click)="next()" [disabled]="firstIndex+itemsPerPage > totalItems-1"></button>
+  <button pButton type="button" icon="arrow-left-icon"  (click)="prev()" [disabled]="firstIndex==0" class="circle-btn"></button>
+  <button pButton type="button" icon="arrow-right-icon" (click)="next()" [disabled]="firstIndex+itemsPerPage > totalItems-1" class="circle-btn"></button>
 </div>
 
 

@@ -11,7 +11,7 @@
     </section>
 
     <section class="action inbox-wrapper text-center">
-      <button class="inbox-btn inbox-wrapper fs-16">Compose</button>
+      <button class="inbox-btn inbox-wrapper fs-16 pointer">Compose</button>
     </section>
 
     <section class="nav folders-nav fs-14">
@@ -29,19 +29,23 @@
     <section class="controls inbox-wrapper flex flex-row-vert-center space-between fs-14">
       <div class="left-controls flex">
         <!--Check All-->
-        <button class="control checkbox-btn flex space-between flex-row-vert-center">
+        <button class="control checkbox-btn flex space-between flex-row-vert-center mail-btn">
           <checkbox (change)="toggleMailsSelection(cbk.checked)" #cbk [(ngModel)]="checkAll"></checkbox>
           <label>All</label>
         </button>
 
         <!--Mark Control-->
-        <p-splitButton [label]="'Mark'" [model]="markOptions"></p-splitButton>
+        <p-splitButton class="mail-btn" [label]="'Mark'" [model]="markOptions"></p-splitButton>
 
         <!--Move Control-->
+        <button type="text" pButton [label]="'Move'" icon="downarrow-small-icon" iconPos="right"
+                (click)="move.toggle($event)" class="mail-btn">
+        </button>
         <p-overlayPanel #move [dismissable]="true">
-          <p-tree [value]="mailFolders" [selectionMode]="'single'" (onNodeSelect)="moveMailsToFolder($event); move.hide()"></p-tree>
+          <p-tree [value]="mailFolders" [selectionMode]="'single'"
+                  (onNodeSelect)="moveMailsToFolder($event); move.hide()"></p-tree>
         </p-overlayPanel>
-        <button type="text" pButton [label]="'Move'" (click)="move.toggle($event)"></button>
+
       </div>
       <div class="right-controls flex flex-row-vert-center">
         <pagination

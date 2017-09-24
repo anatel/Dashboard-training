@@ -1,6 +1,6 @@
 <ul>
   <li  class="pointer clearfix" *ngFor="let item of items" (click)="selectItem(item, $event)" [class.selected]="item.label == selectedItem.label">
-    <a *ngIf="isMailBox(item); else Folder" class="link flex space-between flex-row-vert-center inbox-nav-item">
+    <a *ngIf="isMailBox(item); else Folder" class="link flex space-between flex-row-vert-center inbox-nav-item pointer">
       <div class="flex">
         <div class="icon-wrapper text-center">
           <i class="{{item.icon}}"></i>
