@@ -1,3 +1,5 @@
+@import '../../assets/scss/icons';
+
 .box {
   background-color: #f3f6fb;
 
@@ -9,4 +11,9 @@
       margin-left: 15px;
     }
   }
+}
+
+.close-icon-as-plus {
+  @extend .close-icon;
+  transform: rotate(45deg);
 }

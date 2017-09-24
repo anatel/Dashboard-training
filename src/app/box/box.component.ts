@@ -7,4 +7,7 @@ import {Component, Input} from '@angular/core';
 })
 export class BoxComponent{
   @Input() title;
+  @Input() minimized = false;
+
+  isOpen = true;
 }
