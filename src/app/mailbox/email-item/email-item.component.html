@@ -1,0 +1,7 @@
+<div class="mail-row flex flex-row-vert-center inbox-wrapper" [ngClass]="{'unread': !item.read, 'selected': item.selected}">
+  <td class="check"><checkbox [(ngModel)]="item.selected"></checkbox></td>
+  <td class="favorite"><checkbox [cbkStyle]="!item.read? starCbkSelected : starCbk" [(ngModel)]="item.favorite" name="isFavorite"></checkbox></td>
+  <td class="from">{{item.from}}</td>
+  <td class="subject">{{item.subject}}</td>
+  <td class="time grow-1 text-end">{{item.time | date: isToday()?'hh:mm a' : 'MMM dd'}}</td>
+</div>

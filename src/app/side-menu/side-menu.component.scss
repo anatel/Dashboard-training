@@ -1,0 +1,22 @@
+@import "../../assets/scss/vars";
+
+:host {
+  min-height: 100%;
+  background-color: $sidemenu-bg-color;
+  width: 238px;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.nav-header {
+  color: #5d7593;
+  font-family: $secondary-font;
+}
+
+.selected {
+  .icon {
+    width: 27px; //because of the border left (we want the titles to be aligned)
+  }
+  background-color: #2a3a4d;
+  border-left: solid 4px #3a7bc9;
+}

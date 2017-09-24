@@ -1,0 +1,26 @@
+<section class="logo-and-toggle flex space-between flex-row-vert-center wrapper">
+  <img src="/assets/img/logo.png"/>
+  <i class="menu-icon pointer"></i>
+</section>
+
+<profile-box [userInfo]="currUser"></profile-box>
+<section class="user-info wrapper flex flex-row-vert-center">
+
+</section>
+
+<section class="navigation-list fs-14">
+  <div *ngFor="let navGroup of navGroups;">
+    <div class="nav-header pointer fs-12 bold flex space-between vertical-wrapper-20 horizontal-wrapper-15 letter-space-1">
+      <label>{{navGroup.label | uppercase}}</label>
+      <i class="downarrow-icon"></i>
+    </div>
+    <nav class="nav-items">
+      <ul>
+        <li class="nav-item"  *ngFor="let item of navGroup.navItems;" (click)="selectedItem = item" [class.selected]="selectedItem.label == item.label">
+          <nav-item [navItem]="item"></nav-item>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+</section>

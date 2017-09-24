@@ -1,0 +1,12 @@
+.box {
+  background-color: #f3f6fb;
+
+  .box-title {
+    color: #1b2b3d;
+    border-bottom: solid 1px #dae3f1;
+
+    .action+.action {
+      margin-left: 15px;
+    }
+  }
+}

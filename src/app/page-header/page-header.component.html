@@ -1,0 +1,16 @@
+<header class="wrapper top-bar flex space-between flex-row-vert-center fixed">
+  <section class="search-box relative flex flex-row-vert-center full-width">
+    <input class="search-field fs-14 full-width" type="text" placeholder="Enter your search term here"/>
+    <i class="search-icon absolute"></i>
+  </section>
+
+  <section class="actions flex fs-12 bold">
+    <a class="action relative" href="#"><i class="user-icon"></i>
+      <badge class="overlay-badge" *ngIf="userInfo.friendRequestsCount > 0" [value]="userInfo.friendRequestsCount" [color]="'#f16191'" [size]="'17px'"></badge>
+    </a>
+    <a class="action relative" href="#"><i class="settings-icon"></i></a>
+    <a class="action relative" href="#"><i class="notifications-icon"></i>
+      <badge class="overlay-badge" *ngIf="userInfo.notificationCount > 0" [value]="userInfo.notificationCount" [color]="'#f16191'" [size]="'17px'"></badge>
+    </a>
+  </section>
+</header>

@@ -1,0 +1,26 @@
+:host {
+  background-color: #213043;
+  display: block;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .user-img {
+    margin-right: 10px;
+  }
+
+  .user-position {
+    color: #576576;
+  }
+
+  .detail+.detail {
+    margin-top: 10px;
+  }
+
+  .user-actions {
+    .icon {
+      margin-right: 15px;
+    }
+  }
+}

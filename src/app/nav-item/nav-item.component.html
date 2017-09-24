@@ -1,0 +1,4 @@
+<a class="nav-item-link flex flex-row-vert-center space-between wrapper" href="{{navItem.link}}">
+  <div class="flex flex-row-vert-center full-height"><i class="icon {{navItem.icon}}"></i> <label class="pointer">{{navItem.label}}</label></div>
+  <badge class="d-block border-radius-10 vertical-wrap-3"  *ngIf="navItem.unhandledItemsCount > 0" [color]="'#f16191'" [value]="navItem.unhandledItemsCount" [size]="'40px'"></badge>
+</a>

@@ -1,0 +1,64 @@
+<div class="mailbox mail-wrapper flex">
+  <aside class="menu shrink-0">
+    <section class="user-info flex flex-row-vert-center inbox-wrapper">
+      <div class="user-img-wrapper">
+        <img src="{{userInfo.image}}">
+      </div>
+      <div class="user-info-txt">
+        <label class="user-name fs-14 bold">{{userInfo.fullName}}</label>
+        <label class="user-mail fs-12">{{userInfo.email}}</label>
+      </div>
+    </section>
+
+    <section class="action inbox-wrapper text-center">
+      <button class="inbox-btn inbox-wrapper fs-16">Compose</button>
+    </section>
+
+    <section class="nav folders-nav fs-14">
+      <nav>
+        <mailbox-nav-list [items]="mailFolders" [selectedItem]="selectedFolder"></mailbox-nav-list>
+      </nav>
+    </section>
+
+  </aside>
+  <main class="grow-1">
+    <section class="header fs-16 bold flex flex-row-vert-center inbox-wrapper">
+      <label>{{selectedFolder.label}}</label>
+    </section>
+
+    <section class="controls inbox-wrapper flex flex-row-vert-center space-between fs-14">
+      <div class="left-controls flex">
+        <!--Check All-->
+        <button class="control checkbox-btn flex space-between flex-row-vert-center">
+          <checkbox (change)="toggleMailsSelection(cbk.checked)" #cbk [(ngModel)]="checkAll"></checkbox>
+          <label>All</label>
+        </button>
+
+        <!--Mark Control-->
+        <p-splitButton [label]="'Mark'" [model]="markOptions"></p-splitButton>
+
+        <!--Move Control-->
+        <p-overlayPanel #move [dismissable]="true">
+          <p-tree [value]="mailFolders" [selectionMode]="'single'" (onNodeSelect)="moveMailsToFolder($event); move.hide()"></p-tree>
+        </p-overlayPanel>
+        <button type="text" pButton [label]="'Move'" (click)="move.toggle($event)"></button>
+      </div>
+      <div class="right-controls flex flex-row-vert-center">
+        <pagination
+          [itemsPerPage]="10"
+          [totalItems]="folderMails.length"
+          [itemsPerPageOptions]="[10,20,30]"
+          (paginationChange)="managePagination($event)"
+          [firstIndex]="paginationData.firstIndex"></pagination>
+      </div>
+    </section>
+
+    <section class="mails-table fs-14">
+      <table width="100%">
+        <tr *ngFor="let email of currEmailList">
+          <email-item [item]="email" (addToFav)="addToFav(item)"></email-item>
+        </tr>
+      </table>
+    </section>
+  </main>
+</div>

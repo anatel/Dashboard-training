@@ -1,0 +1,75 @@
+@import '../../assets/scss/vars';
+
+.mailbox {
+  background-color: #f3f5fb;
+
+  .inbox-btn {
+    border: none;
+    border-radius:30px;
+    color:  #f1f5fb;
+    background-color: #eb7618;
+    width: 185px;
+    padding: 8px 20px;
+  }
+
+  .menu {
+    width: 230px;
+    border-right: 1px solid #e1e7ef;
+
+    .user-info {
+      background-color: #53b5f5;
+      color: #f1f5fb;
+      height: $inbox-header-height;
+      .user-name { padding-bottom: 4px; display: block; }
+      .user-img-wrapper { padding-right: 10px;}
+    }
+
+    .folders-nav {
+      color: #515973;
+    }
+
+    .action { height: $inbox-header-height; }
+  }
+
+  .nav { font-family: "OpenSans", sans-serif; }
+
+  .inbox-wrapper {
+    padding: 10px 20px;
+  }
+
+  .header {
+    background-color: #57bf59;
+    color: #f1f5fb;
+    height: $inbox-header-height;
+  }
+
+  .controls {
+    height: $inbox-header-height;
+    border-bottom: 1px solid #e1e7ef;
+    .left-controls {
+      .control+.control { margin-left: 20px; }
+    }
+
+    .right-controls {
+      .pagination {
+        margin-left: 25px;
+
+        .control {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+
+  .mails-table {
+    padding: 0 20px;
+    font-family: "OpenSans", sans-serif;
+    color: #515973;
+  }
+}
+
+.controls {
+  checkbox {
+    margin-right: 10px;
+  }
+}

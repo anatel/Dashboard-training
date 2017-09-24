@@ -1,0 +1,39 @@
+@import '../../assets/scss/vars';
+
+.search-field {
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #e2e2e2;
+  background-color: #fff;
+  padding: $search-padding-size;
+}
+
+.search-box {
+  max-width: 650px;
+  margin-right: 10px;
+  .search-icon {
+    right: $search-padding-size;
+  }
+}
+
+.search-field::-webkit-input-placeholder {
+  color: #9d9d9d;
+  font-style: italic;
+}
+
+.top-bar {
+  background-color: #fff;
+  width: calc(100% - 238px);
+  z-index: 100;
+  .action {
+    .overlay-badge {
+      color: #fff;
+      width: 17px;
+      height: 17px;
+    }
+  }
+
+  .action+.action {
+    padding-left: 15px;
+  }
+}

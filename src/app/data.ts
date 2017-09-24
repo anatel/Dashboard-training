@@ -361,15 +361,7 @@ export const MAIL_FOLDERS: MailFolder[] = [
     icon: 'star-icon',
     label: 'Important',
     badgeColor: '#57cf59',
-    emails: [
-      {
-        from: 'Test User',
-        subject: 'Mail in important mailbox',
-        time: new Date(),
-        favorite: true,
-        read: false
-      }
-    ],
+    emails: [],
     unreadCount: 2,
     type: MailFolderType.MailBox,
     blocked: true
