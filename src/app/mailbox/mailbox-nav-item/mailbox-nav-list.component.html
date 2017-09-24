@@ -1,6 +1,6 @@
 <ul>
   <li  class="pointer clearfix" *ngFor="let item of items" (click)="selectItem(item, $event)" [class.selected]="item.label == selectedItem.label">
-    <a *ngIf="isMailBox(item); else Folder" class="link flex space-between flex-row-vert-center inbox-nav-item point">
+    <a *ngIf="isMailBox(item); else Folder" class="link flex space-between flex-row-vert-center inbox-nav-item">
       <div class="flex">
         <div class="icon-wrapper text-center">
           <i class="{{item.icon}}"></i>
@@ -13,7 +13,10 @@
     <ng-template #Folder>
       <a class="inbox-nav inbox-nav-item link flex space-between inbox-wrapper">
         <label>{{item.label}}</label>
-        <i *ngIf="item.children?.length > 0" class="rightarrow-icon" [class.expanded]="item.isExpanded"></i>
+        <div>
+          <badge class="fs-12 ff-arial d-inline-block right-pad-8" *ngIf="item.unreadCount > 0" [color]="item.badgeColor" [size]="'20px'" [value]="item.unreadCount"></badge>
+          <i *ngIf="item.children?.length > 0" class="rightarrow-icon" [class.expanded]="item.isExpanded"></i>
+        </div>
       </a>
       <mailbox-nav-list *ngIf="item.children && item.isExpanded" [items]="item.children" [selectedItem]="selectedItem" style="width: 90%; display: block; float: right"></mailbox-nav-list>
     </ng-template>

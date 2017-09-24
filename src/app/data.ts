@@ -345,15 +345,13 @@ export const MAIL_FOLDERS: MailFolder[] = [
     label: 'Inbox',
     badgeColor: '#ebc717',
     emails: EMAILS,
-    unreadCount: 9,
+    unreadCount: EMAILS.filter(mail => !mail.read).length,
     type: MailFolderType.MailBox,
   },
   {
     icon: 'envelope2-icon',
     label: 'Sent Mail',
-    badgeColor: 'blue',
     emails: [],
-    unreadCount: 0,
     type: MailFolderType.MailBox,
     blocked: true
   },
@@ -362,7 +360,6 @@ export const MAIL_FOLDERS: MailFolder[] = [
     label: 'Important',
     badgeColor: '#57cf59',
     emails: [],
-    unreadCount: 2,
     type: MailFolderType.MailBox,
     blocked: true
   },
@@ -380,7 +377,6 @@ export const MAIL_FOLDERS: MailFolder[] = [
     label: 'Trash',
     badgeColor: 'black',
     emails: [],
-    unreadCount: 0,
     type: MailFolderType.MailBox
   },
   {
@@ -392,6 +388,8 @@ export const MAIL_FOLDERS: MailFolder[] = [
       {
         label: 'Work',
         type: MailFolderType.Folder,
+        unreadCount: 1,
+        badgeColor: 'blue',
         emails: [{
           read: false,
           favorite: true,
@@ -403,24 +401,28 @@ export const MAIL_FOLDERS: MailFolder[] = [
       {
         label: 'Personal',
         emails: [],
-        type: MailFolderType.Folder
+        type: MailFolderType.Folder,
+        badgeColor: 'brown'
       }
     ]
   },
   {
     label: 'Chats',
     emails: [],
-    type: MailFolderType.Folder
+    type: MailFolderType.Folder,
+    badgeColor: 'red'
   },
   {
     label: 'Spam',
     emails: [],
-    type: MailFolderType.Folder
+    type: MailFolderType.Folder,
+    badgeColor: 'black'
   },
   {
     label: 'Deleted',
     emails: [],
-    type: MailFolderType.Folder
+    type: MailFolderType.Folder,
+    badgeColor: 'coral'
   }
 ];
 

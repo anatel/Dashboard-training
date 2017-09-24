@@ -61,6 +61,7 @@ export class MailboxComponent {
   private initImportantFolder() {
     const importantFolder = this.mailFolders.find(item => item.label === 'Important');
     importantFolder.emails = this.getImportantMails(this.mailFolders);
+    importantFolder.unreadCount = importantFolder.emails.filter(email => !email.read).length;
   }
 
   private getImportantMails(folders: MailFolder[]) {
@@ -78,7 +79,6 @@ export class MailboxComponent {
   }
 
   changeFolder(folder: MailFolder) {
-    // debugger;
     if (folder !== this.selectedFolder) {
       folder['selectable'] = false;
       const currFolder = this.selectedFolder;
@@ -107,6 +107,7 @@ export class MailboxComponent {
       email.selected = false;
     });
     this.checkAll = false;
+    this.selectedFolder.unreadCount = this.selectedFolder.emails.filter(email => !email.read).length;
   }
 
   moveMailsToFolder(event) {
@@ -122,6 +123,8 @@ export class MailboxComponent {
     });
 
     this.checkAll = false;
+    event.node.unreadCount = event.node.emails.filter(email => !email.read).length;
+    this.selectedFolder.unreadCount = this.selectedFolder.emails.filter(email => !email.read).length;
   }
 
   public addToFav(item: Email) {

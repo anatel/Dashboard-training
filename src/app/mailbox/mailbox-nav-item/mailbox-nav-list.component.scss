@@ -14,6 +14,10 @@
     width: 20px;
     height: 20px;
   }
+
+  &:hover {
+    background: #ebedf0;
+  }
 }
 
 .selected {
@@ -36,4 +40,8 @@
       color:  #a5a5bb;
     }
   }
+}
+
+label {
+  cursor: pointer;
 }

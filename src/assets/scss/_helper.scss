@@ -17,6 +17,10 @@ body { font-family: $main-font; }
 .circle {  border-radius: 50%; }
 .border-radius-10 { border-radius: 10px; }
 
+.right-pad-8 {
+  padding-right: 8px;
+}
+
 .flex { display: flex; }
 .flex-col { flex-direction: column; }
 .space-between { justify-content:space-between; }
