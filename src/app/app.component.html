@@ -1,7 +1,7 @@
-<side-menu></side-menu>
+<side-menu [(isOpen)]="isMenuOpen" *ngIf="isMenuOpen"></side-menu>
 
 <section class="main-content-wrapper grow-1">
-  <page-header></page-header>
+  <page-header [(isMenuOpen)]="isMenuOpen"></page-header>
   <main class="main-content wrapper">
     <section class="section">
       <box [title]="'Activity Overview'">

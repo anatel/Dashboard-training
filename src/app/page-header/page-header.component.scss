@@ -23,7 +23,6 @@
 
 .top-bar {
   background-color: #fff;
-  width: calc(100% - 238px);
   z-index: 100;
   .action {
     .overlay-badge {
@@ -33,7 +32,15 @@
     }
   }
 
+  &.width-fix {
+    width: calc(100% - 238px);
+  }
+
   .action+.action {
     padding-left: 15px;
   }
+}
+
+.menu-icon-blue {
+  margin-right: 15px;
 }

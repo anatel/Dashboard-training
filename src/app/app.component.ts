@@ -10,7 +10,7 @@ import {SUMMARIES} from "./data";
 
 export class AppComponent {
   summaries: Summary[];
-
+  isMenuOpen = true;
   constructor() {
     this.summaries = SUMMARIES;
   }

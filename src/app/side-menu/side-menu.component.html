@@ -1,6 +1,6 @@
 <section class="logo-and-toggle flex space-between flex-row-vert-center wrapper">
   <img src="/assets/img/logo.png"/>
-  <i class="menu-icon pointer"></i>
+  <i class="menu-icon pointer" (click)="isOpen = !isOpen; isOpenChange.emit(isOpen)"></i>
 </section>
 
 <profile-box [userInfo]="currUser"></profile-box>

@@ -1,6 +1,7 @@
-import {Component} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {NavGroup, NavItem, UserInfo} from "../interfaces";
 import {CURR_USER, NAV_GROUPS} from "../data";
+import {isBoolean} from "util";
 
 @Component({
   selector: 'side-menu',
@@ -11,6 +12,8 @@ export class SideMenuComponent {
   navGroups: NavGroup[];
   selectedItem: NavItem;
   currUser: UserInfo;
+  @Input() isOpen = true;
+  @Output() isOpenChange = new EventEmitter<boolean>();
 
   constructor() {
     this.navGroups = NAV_GROUPS;

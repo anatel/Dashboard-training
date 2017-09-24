@@ -1,5 +1,8 @@
-<header class="wrapper top-bar flex space-between flex-row-vert-center fixed">
+<header class="wrapper top-bar flex space-between flex-row-vert-center fixed" [ngClass]="{'full-width': !isMenuOpen, 'width-fix': isMenuOpen }">
   <section class="search-box relative flex flex-row-vert-center full-width">
+    <div *ngIf="!isMenuOpen" (click)="isMenuOpen=!isMenuOpen; isMenuOpenChange.emit(isMenuOpen)">
+      <i class="menu-icon-blue pointer"></i>
+    </div>
     <input class="search-field fs-14 full-width" type="text" placeholder="Enter your search term here"/>
     <i class="search-icon absolute"></i>
   </section>
