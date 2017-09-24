@@ -6,6 +6,6 @@ import {NavItem} from "../interfaces";
   templateUrl: './nav-item.component.html',
   styleUrls: ['./nav-item.component.scss']
 })
-export class NavItemComponent{
+export class NavItemComponent {
   @Input() navItem: NavItem;
 }

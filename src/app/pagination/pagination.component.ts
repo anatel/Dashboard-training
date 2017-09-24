@@ -17,7 +17,6 @@ export class PaginationComponent implements OnInit, OnChanges{
   public _itemsPerPageOptions: MenuItem[];
 
   ngOnChanges() {
-    console.log('on change');
     if (this.firstIndex > this.totalItems - 1 && this.firstIndex > 0) {
       this.prev();
     }
@@ -55,7 +54,6 @@ export class PaginationComponent implements OnInit, OnChanges{
   }
 
   private emitChanges() {
-    console.log('in emit changes');
     this.paginationChange.emit({
       itemsPerPage: this.itemsPerPage,
       firstIndex: this.firstIndex

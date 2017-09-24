@@ -127,12 +127,6 @@ export class MailboxComponent {
     this.selectedFolder.unreadCount = this.selectedFolder.emails.filter(email => !email.read).length;
   }
 
-  public addToFav(item: Email) {
-    console.log('add to fav');
-      const i = this.mailFolders.findIndex((folder) => folder.label.toLowerCase() === 'important');
-      this.mailFolders[i].emails.push(item);
-  }
-
   get selectedMails() {
     return this.folderMails.filter((email) => email.selected);
   }

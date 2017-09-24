@@ -29,8 +29,6 @@ export class MailboxNavListComponent implements OnInit {
     if (item.type === MailFolderType.Folder && item.children && item.children.length > 0) {
       item.isExpanded = !item.isExpanded;
     }
-
-    console.log(item);
   }
 }
 

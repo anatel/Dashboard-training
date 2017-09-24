@@ -2,7 +2,8 @@
   <div class="box-title flex space-between wrapper flex-row-vert-center bold fs-16">
     <label>{{title}}</label>
     <section class="actions flex flex-row-vert-center">
-      <i class="action minimize-icon pointer" [ngClass]="{'minimize-icon': !minimized, 'close-icon-as-plus': minimized}" (click)="minimized=!minimized"></i>
+      <i class="action minimize-icon pointer" [ngClass]="{'minimize-icon': !minimized, 'close-icon-as-plus': minimized}"
+         (click)="minimized=!minimized; minimizedChange.emit(minimized)"></i>
       <i class="action close-icon pointer" (click)="isOpen=!isOpen"></i>
     </section>
   </div>

@@ -11,7 +11,6 @@ export class EmailItemComponent{
   public starCbk: Checkbox = starCbk;
   public starCbkSelected: Checkbox = starCbk;
   @Input() item: Email;
-  @Output() addToFav = new EventEmitter<any>();
 
   constructor() {
     this.starCbk = starCbk;

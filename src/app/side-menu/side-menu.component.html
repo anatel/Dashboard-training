@@ -10,11 +10,11 @@
 
 <section class="navigation-list fs-14">
   <div *ngFor="let navGroup of navGroups;">
-    <div class="nav-header pointer fs-12 bold flex space-between vertical-wrapper-20 horizontal-wrapper-15 letter-space-1">
+    <div class="nav-header pointer fs-12 bold flex space-between vertical-wrapper-20 horizontal-wrapper-15 letter-space-1" (click)="navGroup.isExpanded = !navGroup.isExpanded">
       <label>{{navGroup.label | uppercase}}</label>
-      <i class="downarrow-icon"></i>
+      <i [ngClass]="{'downarrow-icon': navGroup.isExpanded, 'rightarrow-icon': !navGroup.isExpanded}" class="downarrow-icon"></i>
     </div>
-    <nav class="nav-items">
+    <nav class="nav-items" *ngIf="navGroup.isExpanded">
       <ul>
         <li class="nav-item"  *ngFor="let item of navGroup.navItems;" (click)="selectedItem = item" [class.selected]="selectedItem.label == item.label">
           <nav-item [navItem]="item"></nav-item>

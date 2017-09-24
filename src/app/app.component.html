@@ -1,10 +1,10 @@
-<side-menu [(isOpen)]="isMenuOpen" *ngIf="isMenuOpen"></side-menu>
+<side-menu [(isOpen)]="isMenuOpen" [hidden]="!isMenuOpen"></side-menu>
 
 <section class="main-content-wrapper grow-1">
   <page-header [(isMenuOpen)]="isMenuOpen"></page-header>
   <main class="main-content wrapper">
     <section class="section">
-      <box [title]="'Activity Overview'">
+      <box [title]="'Activity Overview'" [(minimized)]="isActivityBoxMinimized">
         <img class="full-width" src="/assets/img/graph.jpg"/>
       </box>
     </section>
@@ -14,7 +14,7 @@
     </section>
 
     <section class="section">
-      <box [title]="'Mails'">
+      <box [title]="'Mails'" [(minimized)]="isMailboxMinimized">
         <mailbox></mailbox>
       </box>
     </section>

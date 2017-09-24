@@ -161,6 +161,7 @@ body { font-family: $main-font; }
 .grayed {
   color: #cccccc;
 }
+
 .ui-splitbutton {
   height: 30px;
   padding-left: 15px;
@@ -168,24 +169,4 @@ body { font-family: $main-font; }
   border: 1px solid #CECECE;
   border-radius: 30px;
   background-color: #f3f5fb;
-
-  //.ui-dropdown-label {
-  //  color: #515973;
-  //}
-  //
-  //.ui-state-default {
-  //  border: none;
-  //}
-  //
-  //.ui-dropdown-trigger {
-  //  background: url("/assets/img/downarrow-small.png") no-repeat;
-  //
-  //  .fa-caret-down {
-  //    display: none;
-  //  }
-  //}
-  //
-  //.ui-state-default, .ui-dropdown-label {
-  //  background-color: transparent;
-  //}
 }
