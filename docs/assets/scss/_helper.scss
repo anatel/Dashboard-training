@@ -1,0 +1,237 @@
+* {  box-sizing: border-box; }
+
+body { font-family: $main-font; }
+
+.wrapper { padding: 15px; }
+
+.horizontal-wrapper-15 {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.vertical-wrapper-20 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.circle {  border-radius: 50%; }
+.border-radius-10 { border-radius: 10px; }
+
+.right-pad-8 {
+  padding-right: 8px;
+}
+
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+.space-between { justify-content:space-between; }
+.space-around { justify-content: space-around; }
+.flex-wrap { flex-wrap: wrap; }
+.grow-1 { flex-grow: 1; }
+.shrink-0 { flex-shrink: 0; }
+.space-around { justify-content: space-around; }
+.flex-row-vert-center { align-items: center; }
+.flex-col-vert-center { align-items: center; }
+.flex-center-content {
+  justify-content: center;
+  align-items: center;
+}
+
+.reverse { flex-direction: row-reverse; }
+
+.fixed { position: fixed; }
+.relative { position: relative; }
+.absolute { position: absolute; }
+.d-block { display: block; }
+.d-inline-block { display: inline-block; }
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.vertical-center {
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%);
+}
+
+.bg-main-pink { background-color: $main-pink; }
+
+.pointer {
+  cursor: pointer;
+}
+
+.uppercase { text-transform: uppercase; }
+
+.overlay-badge {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+}
+
+.ff-arial {
+  font-family: "Arial", sans-serif;
+}
+.text-center { text-align: center; }
+.text-end { text-align: end; }
+.vertical-elem-center { vertical-align: middle; }
+
+.fs-12 { font-size: 12px; }
+.fs-14 { font-size: 14px; }
+.fs-16 { font-size: 16px; }
+.fs-24 {font-size: 24px; }
+.fs-27 { font-size: 27px; }
+.fs-48 { font-size: 48px; }
+
+.bold {
+  font-weight: bold;
+}
+
+.main-content-wrapper {
+  background-color: $main-bg-color;
+
+  .main-content { padding-top: 89px; }
+}
+
+.min-full-height { min-height: 100%; }
+.full-height { height: 100%; }
+.full-width { width: 100%; }
+
+//Just for the mock.
+.activity-review {
+  .box-content {
+    height: 425px;
+  }
+}
+
+.messages-and-tasks {
+  .box {
+    .box-content {
+      height: 345px;
+    }
+  }
+}
+
+.right-margin-15 {
+  margin-right: 15px;
+}
+
+.vertical-wrap-3 {
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+.section {
+  margin-bottom: $space-between-sections;
+}
+
+.letter-space-1 {
+  letter-spacing: 1px;
+}
+
+.width-40 { width: 40px; }
+[class*='-icon']{
+  display: inline-block;
+}
+
+.control {
+  height: 30px;
+  padding-left:15px;
+  padding-right:15px;
+  border-radius: 30px;
+  background-color: #f3f5fb;
+  border: 1px solid #CECECE;
+  color: #515973;
+}
+
+.hide {
+  display: none;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.grayed {
+  color: #cccccc;
+}
+
+
+.mail-btn {
+  &.ui-button {
+    border: 1px solid #CECECE !important;
+    border-radius: 30px;
+    background-color: #f3f5fb !important;
+    color: #515973 !important;
+    padding: 0 15px;
+
+    .ui-button-text {
+      padding-left: 0;
+    }
+
+    .ui-button-icon-right {
+      margin-top: -2px;
+      padding-right: 15px;
+    }
+  }
+}
+
+.circle-btn {
+  &.ui-button {
+    @extend .circle;
+    border: 1px solid #CECECE;
+    background-color: #f3f5fb;
+
+    &:enabled:hover, &:enabled:focus {
+      border: 1px solid #CECECE;
+      background-color: #f3f5fb;
+    }
+
+    .ui-button-icon-left {
+      margin-top: -5px;
+      margin-left: -2px;
+    }
+  }
+
+}
+
+.ui-splitbutton {
+  height: 30px;
+  //padding-left: 15px;
+  //padding-right: 15px;
+  border: 1px solid #CECECE;
+  border-radius: 30px;
+  background-color: #f3f5fb;
+  display: flex;
+  align-items: center;
+
+  .ui-menu {
+    top: 30px !important;
+  }
+
+  .ui-button {
+    padding: 0 15px;
+    background: none;
+    border: none;
+    color: #515973;
+
+    &:enabled:hover, &:enabled:focus  {
+      background: none;
+      border: none;
+      color: #515973;
+    }
+
+    .fa-caret-down {
+      @extend .downarrow-small-icon;
+      margin-top: -2px;
+      &:before {
+        content: '';
+      }
+    }
+
+    .ui-button-text {
+      padding: 0;
+    }
+  }
+}
