@@ -18,7 +18,7 @@
           <i *ngIf="item.children?.length > 0" class="rightarrow-icon" [class.expanded]="item.isExpanded"></i>
         </div>
       </a>
-      <mailbox-nav-list *ngIf="item.children && item.isExpanded" [items]="item.children" [selectedItem]="selectedItem" style="width: 90%; display: block; float: right"></mailbox-nav-list>
+      <mailbox-nav-list *ngIf="item.children && item.isExpanded" [items]="item.children" style="width: 90%; display: block; float: right"></mailbox-nav-list>
     </ng-template>
   </li>
 </ul>

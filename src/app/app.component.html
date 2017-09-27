@@ -1,9 +1,12 @@
 <side-menu [(isOpen)]="isMenuOpen" [hidden]="!isMenuOpen"></side-menu>
 
 <section class="main-content-wrapper grow-1">
+  <!--// we can use main here instead of section-->
   <page-header [(isMenuOpen)]="isMenuOpen"></page-header>
+  <!--//maybe call it app-header-->
   <main class="main-content wrapper">
     <section class="section">
+      <!--instead of class section use margin class-->
       <box [title]="'Activity Overview'" [(minimized)]="isActivityBoxMinimized">
         <img class="full-width" src="/assets/img/graph.jpg"/>
       </box>

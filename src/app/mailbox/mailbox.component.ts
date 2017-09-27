@@ -50,6 +50,7 @@ export class MailboxComponent {
 
   private initFolders() {
     this.changeFolder(this.mailFolders[0]);
+    this.navSrv.state.next(this.selectedFolder);
     this.mailFolders.forEach((folder) => {
       if (folder.blocked) {
         folder['styleClass'] = 'hide';

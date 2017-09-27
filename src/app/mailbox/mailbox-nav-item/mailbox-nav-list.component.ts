@@ -9,13 +9,17 @@ import {NavigationService} from "../../services/navigation.service";
 })
 export class MailboxNavListComponent implements OnInit {
   @Input() items: MailFolder[];
-  @Input() selectedItem: MailFolder;
+  selectedItem: MailFolder;
 
-  constructor(private navSrv: NavigationService) {}
+  constructor(private navSrv: NavigationService) {
+
+  }
 
   ngOnInit() {
+    this.selectedItem = this.navSrv.state.getValue();
     this.navSrv.state.subscribe((state) => {
       this.selectedItem = state;
+      console.log('this.selectedItem',this.selectedItem);
     });
   }
 
