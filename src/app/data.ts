@@ -83,7 +83,7 @@ export const NAV_GROUPS: NavGroup[] = [
 ];
 
 export const CURR_USER: UserInfo = {
-  image: '/assets/img/luke.png',
+  image: './assets/img/luke.png',
   position: 'Web Designer',
   fullName: 'Luke Skywalker',
   notificationCount: 5,
@@ -96,7 +96,6 @@ export const INBOX_USER: UserInfo = {
   fullName: 'Jason Danim',
   email: 'jasondanim@indus.com'
 };
-
 export const SUMMARIES: Summary[] = [
   {
     icon: 'users-icon',
