@@ -92,7 +92,7 @@ export const CURR_USER: UserInfo = {
 
 
 export const INBOX_USER: UserInfo = {
-  image: '/assets/img/inbox-user.png',
+  image: 'assets/img/inbox-user.png',
   fullName: 'Jason Danim',
   email: 'jasondanim@indus.com'
 };
